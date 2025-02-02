@@ -15,7 +15,7 @@ cmd_mountluks = "mount /dev/mapper/storagebox-luks /mnt/luks"
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 # Test a connection to the Storagebox (SMB port)
-print("=====" + str(datetime.now()) + "====\nTrying telnet to " + box_dnsname + ":" + str(box_port))
+print("=====" + str(datetime.datetime.now()) + "====\nTrying telnet to " + box_dnsname + ":" + str(box_port))
 sock.settimeout(10)
 is_reachable = sock.connect_ex((box_dnsname, box_port))
 if is_reachable != 0:
